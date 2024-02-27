@@ -95,5 +95,10 @@ public interface List<T>
      */
     public void clear();
 
+    /**
+     * Returns an inorder iteration of the linked list
+     *
+     * @return java.util.Iterator
+     */
     public Iterator<T> iterator();
 }
