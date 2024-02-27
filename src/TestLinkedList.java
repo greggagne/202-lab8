@@ -2,6 +2,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import java.util.Iterator;
+
 public class TestLinkedList {
 
 	@Test
@@ -187,5 +189,32 @@ public class TestLinkedList {
 		assertEquals(3, list.getFrequency("apples"));
 		assertEquals(1, list.getFrequency("bananas"));
 		assertEquals(1, list.getFrequency("donuts"));
+	}
+
+	@Test
+	public void testIterator() {
+		List<String> list = new LinkedList<>();
+
+		String[] values = {"apples","bananas","cherries","donuts","eggplant"};
+
+		list.add("apples");
+		list.add("bananas");
+		list.add("cherries");
+		list.add("donuts");
+		list.add("eggplant");
+
+		Iterator<String> itr = list.iterator();
+
+		assertTrue(itr.hasNext());
+		assertEquals(values[0],itr.next());
+		assertTrue(itr.hasNext());
+		assertEquals(values[1],itr.next());
+		assertTrue(itr.hasNext());
+		assertEquals(values[2],itr.next());
+		assertTrue(itr.hasNext());
+		assertEquals(values[3],itr.next());
+		assertTrue(itr.hasNext());
+		assertEquals(values[4],itr.next());
+		assertFalse(itr.hasNext());
 	}
 }

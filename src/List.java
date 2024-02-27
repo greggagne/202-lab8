@@ -1,4 +1,6 @@
-/** 
+import java.util.Iterator;
+
+/**
  * List.java
  *
  * An interface representing a List ADT.
@@ -92,4 +94,6 @@ public interface List<T>
      * Clears the list
      */
     public void clear();
+
+    public Iterator<T> iterator();
 }

@@ -1,7 +1,9 @@
+import java.util.Iterator;
+
 /**
  * Implementation of the List interface.
  * 
- * This implementation uses a singly-linked list.
+ * This implementation involves a single-linked list.
  * 
  * @author Greg Gagne 
  *
@@ -154,6 +156,25 @@ public class LinkedList<T> implements List<T> {
 	public void clear() {
 		// TO DO
 
+	}
+
+	@Override
+	public Iterator<T> iterator() {
+		return new LinkedListIterator();
+	}
+
+	private class LinkedListIterator implements Iterator<T>
+	{
+
+		@Override
+		public boolean hasNext() {
+			return false;
+		}
+
+		@Override
+		public T next() {
+			return null;
+		}
 	}
 
 }
